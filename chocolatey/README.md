@@ -1,8 +1,8 @@
 Here's what I did to get it working:
 
-# Followed steps at the QuickStart guide: https://github.com/chocolatey/chocolatey/wiki/CreatePackagesQuickStart, modifying the nuspec and ps1 files as in this folder.
-#Started command prompt as Administrator! (The following step failed without being an Admin. I do not know why, but plan to ask the Chocolatey team)
-#Fromn `c:\Chocolatey\chocolateytemplates\_templates\VersionOne>` type `cpack`
+* Followed steps at the QuickStart guide: https://github.com/chocolatey/chocolatey/wiki/CreatePackagesQuickStart, modifying the nuspec and ps1 files as in this folder, and using `VersionOne` as `PackageName`.
+* Started command prompt as Administrator! (The following step failed without being an Admin. I do not know why, but plan to ask the Chocolatey team)
+* In `c:\Chocolatey\chocolateytemplates\_templates\VersionOne>` type `cpack`
 
 ```
 Calling 'C:\Chocolatey\chocolateyInstall\nuget.exe pack  -NoPackageAnalysis'.
