@@ -4,8 +4,8 @@ try {
 
   $v1FileFullPath = get-childitem $toolsDir -recurse -include VersionOne.Setup*.exe | select -First 1
   Install-ChocolateyInstallPackage 'VersionOne' 'exe' '-Quiet:2 -SigningKey:1BBD93C864A6001737BAA148DCDDB67E927982FA6A59E7DF53CDBDF0DD3CE29A -DbServer:(local) -LogFile:C:\Projects\v1Package\setup.log -DBName:V1CHOC V1CHOC' "$v1FileFullPath"
-  Remove-Item "$v1FileFullPath"e
-  Write-ChocolateySuccess 'VersionOn'
+  Remove-Item "$v1FileFullPath"
+  Write-ChocolateySuccess 'VersionOne'
 } catch {
   Write-ChocolateyFailure 'VersionOne' "$($_.Exception.Message)"
   throw
