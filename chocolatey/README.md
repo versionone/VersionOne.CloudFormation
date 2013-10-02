@@ -48,3 +48,23 @@ At C:\Chocolatey\lib\VersionOne.13.2.4.66\tools\chocolateyInstall.ps1:7 char:3
     + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
 
 ```
+
+# Contents of tools folder for VersionOne package
+
+Also, after doing this the way I did above (whether right or wrong), it resulted in these files being in the 
+`c:\Chocolatey\lib\VersionOne.13.2.4.66\tools` folder:
+
+```
+ Directory of c:\Chocolatey\lib\VersionOne.13.2.4.66\tools
+
+10/02/2013  01:32 PM    <DIR>          .
+10/02/2013  01:32 PM    <DIR>          ..
+10/02/2013  01:32 PM               714 chocolateyInstall.ps1
+08/13/2013  03:18 PM         2,206,207 Setup-VersionOne.DatamartLoader-13.2.1213.3.exe
+09/19/2013  01:36 PM           172,804 V1.R13.2.InstallationGuide.Enterprise.pdf
+08/13/2013  03:18 PM         1,458,768 V1Datamart.pdf
+10/02/2013  01:32 PM    <DIR>          V1DatamartHTMLDoc
+09/20/2013  01:04 PM        20,707,453 VersionOne.Setup-Enterprise-13.2.4.66.exe
+10/02/2013  01:32 PM                 6 VersionOne.Setup-Enterprise-13.2.4.66.exe.ignore
+
+```
