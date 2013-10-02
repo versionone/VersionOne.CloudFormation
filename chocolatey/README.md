@@ -10,7 +10,7 @@ Attempting to build package from 'VersionOne.nuspec'.
 Successfully created package 'C:\Chocolatey\chocolateytemplates\_templates\VersionOne\VersionOne.13.2.4.66.nupkg'.
 ```
 
-Then, I typed `cinst VersionOne -source '%CD%', which installed it properly, but still produced this error:
+Then, I typed `cinst VersionOne -source '%CD%'`, which installed it properly, but still produced this error:
 
 ```text
 c:\Chocolatey\chocolateytemplates\_templates\VersionOne>cinst VersionOne -source c:\Chocolatey\chocolateytemplates\_templates\VersionOne
