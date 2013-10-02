@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>VersionOne</id>
+    <title>VersionOne</title>
+    <version>13.2.4.66</version>
+    <authors>VersionOne, Inc.</authors>
+    <owners>VersionOne, Inc.</owners>
+    <summary>VersionOne</summary>
+    <description>VersionOne</description>
+    <projectUrl>http://www.versionone.com</projectUrl>
+    <tags>VersionOne admin</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.versionone.com</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl>https://raw.github.com/__CHOCO_PKG_OWNER_REPO__/master/VersionOne/VersionOne.png</iconUrl>-->
+    <!--
+    <dependencies>
+      <dependency id="IIS-WebServerRole" source="windowsfeatures" />
+      <dependency id="IIS-ASPNET" source="windowsfeatures" />
+    </dependencies>
+    -->
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**.ps1" target="tools" />
+    <!--<file src="content\**" target="content" />-->
+  </files>
+</package>
