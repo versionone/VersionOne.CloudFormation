@@ -1,4 +1,45 @@
-Here's what I did to get it working:
+# Quickstart
+
+This contains a VersionOne Chocolatey package definition with custom install and uninstall steps. It supports
+overriding default installation options by setting environment variables.
+
+## Default installation configuration
+
+By default, the package passes only the following parameters to the VersionOne installer:
+
+* Quiet = `2` (causes a quiet VersionOne installation with no manual button clicks required)
+* InstanceName = `VersionOne`
+* DBServer = `(local)` (SQL Server default location)
+* DBName = `VersionOne`
+
+## Install with default configuration
+
+* Verify that you have IIS already installed -- TODO: create a "VersionOne DEPS" packages.config that can be used to prep a machine first (I suppose it could also be in the dependencies list of the VersionOne package, but that is a little tricky)
+* Verify that you have a SQL Server instance at `(local)`.
+* Install Chocolatey if you have not already.
+* Open a windows command prompt as `Administrator` and navigate to `C:\VersionOneInstall`
+* Clone this repository into `C:\VersionOneInstall` or wherever you would like.
+* Or just directly download [https://github.com/versionone/VersionOne.CloudFormation/raw/master/chocolatey/VersionOne/VersionOne.13.2.4.66.nupkg](https://github.com/versionone/VersionOne.CloudFormation/raw/master/chocolatey/VersionOne/VersionOne.13.2.4.66.nupkg) - TODO: unhardcode this
+* Then type `cinst VersionOne -source "%CD%"`
+
+This should install VersoinOne with the defaults. After it's finished, you'll be able to navigate to [http://localhost/VersionOne](http://localhost/VersionOne) and login with admin / admin!
+
+## Usng environment variables to override default options or specify more options
+
+The VersionOne installer supports a number of other command-line arguments.
+You can read about them in the VersionOne Community site at [TODO].
+
+If you wanted to override the `InstanceName` and the `DBServer`, but keep the `DBName` the same, then all you 
+have to do differently is add a couple of environment variables before you run `cinst`:
+
+```batch
+set V1InstanceName=V1Agile
+set V1DBServer=V1AgileSql
+cinst VersionOne -source "%CD%"
+
+```
+
+# Old notes:
 
 * Followed steps at the QuickStart guide: https://github.com/chocolatey/chocolatey/wiki/CreatePackagesQuickStart, modifying the nuspec and ps1 files as in this folder, and using `VersionOne` as `PackageName`.
 * Started command prompt as Administrator! (The following step failed without being an Admin. I do not know why, but plan to ask the Chocolatey team)
