@@ -17,8 +17,8 @@ By default, the package passes only the following parameters to the VersionOne i
 * Verify that you have IIS already installed -- TODO: create a "VersionOne DEPS" packages.config that can be used to prep a machine first (I suppose it could also be in the dependencies list of the VersionOne package, but that is a little tricky)
 * Verify that you have a SQL Server instance at `(local)`.
 * Install Chocolatey if you have not already.
-* Open a windows command prompt as `Administrator` and navigate to `C:\VersionOneInstall`
-* Clone this repository into `C:\VersionOneInstall` or wherever you would like.
+* Open a windows command prompt as `Administrator` and create a folder `C:\VersionOneInstall`, or whatever you'd like to name it.
+* Clone or download this repository into `C:\VersionOneInstall`.
 * Or just directly download [https://github.com/versionone/VersionOne.CloudFormation/raw/master/chocolatey/VersionOne/VersionOne.13.2.4.66.nupkg](https://github.com/versionone/VersionOne.CloudFormation/raw/master/chocolatey/VersionOne/VersionOne.13.2.4.66.nupkg) - TODO: unhardcode this
 * Then type `cinst VersionOne -source "%CD%"`
 
