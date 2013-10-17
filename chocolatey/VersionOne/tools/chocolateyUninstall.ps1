@@ -1,4 +1,3 @@
-# TODO: this needs work, it's not working.
 try {
   $chocTempDir = Join-Path $env:TEMP "chocolatey"
   $tempDir = Join-Path $chocTempDir "$packageName"
