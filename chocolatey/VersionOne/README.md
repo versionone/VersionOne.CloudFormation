@@ -24,7 +24,7 @@ By default, the package passes only the following parameters to the VersionOne i
 
 This should install VersoinOne with the defaults. After it's finished, you'll be able to navigate to [http://localhost/VersionOne](http://localhost/VersionOne) and login with admin / admin!
 
-## Usng environment variables to override default options or specify more options
+## Override default configuration with environment variables
 
 The VersionOne installer supports a number of other command-line arguments.
 You can read about them in the VersionOne Community site at [TODO].
