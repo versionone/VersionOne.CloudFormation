@@ -40,7 +40,7 @@ try {
   
   $v1FileFullPath = get-childitem "$tempDir" -recurse -include VersionOne.Setup*.exe | select -First 1
   Install-ChocolateyInstallPackage "VersionOne" "exe" "$silentArgs" "$v1FileFullPath"
-  Remove-Item "$tempDir\*"" -recurse -exclude VersionOneSetup.log
+  Remove-Item "$tempDir\*" -recurse -exclude VersionOneSetup.log
   Write-ChocolateySuccess "VersionOne"
 } catch {
   Write-ChocolateyFailure "VersionOne" "$($_.Exception.Message)"
