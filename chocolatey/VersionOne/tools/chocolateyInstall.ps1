@@ -1,7 +1,7 @@
 try {
   $chocTempDir = Join-Path $env:TEMP "chocolatey"
   $tempDir = Join-Path $chocTempDir "$packageName"
-  New-Item $tempDir -type directory
+  New-Item "$tempDir" -type directory
   $zipFile = 'VersionOne.zip'
   $file = Join-Path $tempDir $zipFile
   $logFile = Join-Path $tempDir "VersionOneSetup.log"
@@ -34,14 +34,15 @@ try {
     }
     $silentArgs = $silentArgs + " " + $v1Params["InstanceName"]
   }
-  Get-ChocolateyWebFile $packageName $file $url $url64
-  Get-ChocolateyUnzip $file $tempDir
+  #Get-ChocolateyWebFile $packageName "$file" "$url" "$url64"
+  #Get-ChocolateyUnzip "$file" "$tempDir"
+  Install-ChocolateyZipPackage "$packageName" "$url" "$file" 
   
-  $v1FileFullPath = get-childitem $tempDir -recurse -include VersionOne.Setup*.exe | select -First 1
-  Install-ChocolateyInstallPackage 'VersionOne' 'exe' $silentArgs "$v1FileFullPath"
-  Remove-Item $tempDir\* -recurse -exclude VersionOneSetup.log
-  Write-ChocolateySuccess 'VersionOne'
+  $v1FileFullPath = get-childitem "$tempDir" -recurse -include VersionOne.Setup*.exe | select -First 1
+  Install-ChocolateyInstallPackage "VersionOne" "exe" "$silentArgs" "$v1FileFullPath"
+  Remove-Item "$tempDir\*"" -recurse -exclude VersionOneSetup.log
+  Write-ChocolateySuccess "VersionOne"
 } catch {
-  Write-ChocolateyFailure 'VersionOne' "$($_.Exception.Message)"
+  Write-ChocolateyFailure "VersionOne" "$($_.Exception.Message)"
   throw
 }
