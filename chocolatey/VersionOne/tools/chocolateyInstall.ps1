@@ -1,6 +1,7 @@
 try {
   $chocTempDir = Join-Path $env:TEMP "chocolatey"
   $tempDir = Join-Path $chocTempDir "$packageName"
+  New-Item $tempDir -type directory
   $zipFile = 'VersionOne.zip'
   $file = Join-Path $tempDir $zipFile
   $logFile = Join-Path $tempDir "VersionOneSetup.log"
